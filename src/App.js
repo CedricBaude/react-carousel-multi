@@ -2,40 +2,16 @@ import './App.css';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Product from './Product';
+import { productData, responsive } from './Data';
 
 function App() {
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 1024 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 1024, min: 800 },
-            items: 4
-        },
-        tablet: {
-            breakpoint: { max: 800, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
+
+
+    const product = productData.map((item) => <Product name={item.name} url={item.imageurl} price={item.price} description={item.description} />)
     return (
         <div className="App">
             <h1>React Multi Carousel</h1>
-            <Carousel responsive={responsive}>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <div>Item 2</div>
-                <div>Item 3</div>
-                <div>Item 4</div>
-            </Carousel>
+            <Carousel responsive={responsive}>{product}</Carousel>
         </div>
     );
 }
