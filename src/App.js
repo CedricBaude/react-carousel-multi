@@ -11,7 +11,7 @@ function App() {
     return (
         <div className="App">
             <h1>React Multi Carousel</h1>
-            <Carousel responsive={responsive} showDots={true} infinite={true} >{product}</Carousel>
+            <Carousel responsive={responsive} showDots={true} autoPlay={true} autoPlaySpeed={2000} infinite={true}>{product}</Carousel>
         </div>
     );
 }
