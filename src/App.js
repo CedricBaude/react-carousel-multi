@@ -7,15 +7,15 @@ function App() {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
+            breakpoint: { max: 4000, min: 1024 },
             items: 5
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            breakpoint: { max: 1024, min: 800 },
+            items: 4
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 800, min: 464 },
             items: 2
         },
         mobile: {
@@ -31,7 +31,7 @@ function App() {
                 <Product />
                 <Product />
                 <Product />
-
+                <Product />
                 <div>Item 2</div>
                 <div>Item 3</div>
                 <div>Item 4</div>
